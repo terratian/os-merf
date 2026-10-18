@@ -3,7 +3,7 @@
     "region_name": "Central Andean Highlands",
     "target_elevation_meters": 3400,
     "soil_classification": "Andosol / Leptosol mix",
-    "primary_cultivars": ["Solanum tuberosum (Potato)", "Chenopodium quinoa (Quinoa)", "Zea mays (Highland Maize)"]
+    "primary_cultivars": ["Solanum tuberosum", "Chenopodium quinoa"]
   },
   "demographic_constants": {
     "baseline_population": 45000,
@@ -12,20 +12,18 @@
   },
   "agricultural_matrix": {
     "terrace_efficiency_coefficient": 1.35,
-    "unmodified_slope_yield_kcal_per_capita": 2100,
     "terrace_yield_kcal_per_capita": 3850,
-    "frost_mitigation_factor": 0.85,
-    "fallow_cycle_years": 4,
-    "annual_precipitation_mm": 650
+    "fallow_cycle_years": 4
   },
   "logistical_friction_coefficients": {
     "vertical_incline_penalty_per_100m": 1.45,
-    "primitive_pack_animal_efficiency": 0.12,
     "rough_terrain_caloric_expenditure_multiplier": 1.65
   },
-  "historical_shock_thresholds": {
-    "el_nino_precipitation_drop_pct": 0.45,
-    "seismic_landslide_terrace_destruction_pct": 0.18,
-    "extended_frost_event_days": 14
-  }
+  "historical_climate_loop": [
+    {"year": 1, "environmental_event": "baseline"},
+    {"year": 2, "environmental_event": "baseline"},
+    {"year": 3, "environmental_event": "drought"},
+    {"year": 4, "environmental_event": "megadrought"},
+    {"year": 5, "environmental_event": "baseline"}
+  ]
 }
