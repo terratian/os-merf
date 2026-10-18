@@ -1,0 +1,66 @@
+[
+  {
+    "site_metadata": {
+      "site_name": "Sacsayhuamán Foundation Complex",
+      "geographical_zone": "Cusco Valley, Andean Highlands",
+      "coordinates": {
+        "latitude": -13.5079,
+        "longitude": -71.9822,
+        "elevation_meters": 3701
+      }
+    },
+    "geomechanical_features": {
+      "masonry_type": "3D Interlocking Polygonal Megalithic",
+      "primary_lithology": "Limestone / Andesite",
+      "geotorsional_adaptations": [
+        "Concave-convex interfacial block mating",
+        "Corner-wrapping monolithic blocks",
+        "Absence of continuous horizontal shear planes"
+      ],
+      "peak_block_mass_tons": 128.0
+    },
+    "empirical_chronology": {
+      "surface_exposure_dating_method": "10Be/26Al Cosmogenic Nuclide",
+      "calculated_exposure_age_years_bp": 11200,
+      "chronological_margin_of_error": 450,
+      "stratigraphic_context_status": "Decoupled from modern surface soil strata"
+    },
+    "regional_economic_abundance": {
+      "associated_profile_matrix": "andes_profile.json",
+      "local_carrying_capacity_density_per_km2": 85.0,
+      "modeled_caloric_surplus_bandwidth": "Insufficient under primitive transport assumptions"
+    }
+  },
+  {
+    "site_metadata": {
+      "site_name": "Ahu Vinapu Structural Platform",
+      "geographical_zone": "Rapa Nui (Easter Island), Southeast Pacific",
+      "coordinates": {
+        "latitude": -27.1736,
+        "longitude": -109.4025,
+        "elevation_meters": 18
+      }
+    },
+    "geomechanical_features": {
+      "masonry_type": "Precision Scribed Mortarless Polygonal",
+      "primary_lithology": "Basalt",
+      "geotorsional_adaptations": [
+        "Planar rear beveling for micro-gap fitment",
+        "Asymmetric geometric load distribution",
+        "Basal keyway nesting"
+      ],
+      "peak_block_mass_tons": 7.5
+    },
+    "empirical_chronology": {
+      "surface_exposure_dating_method": "Chlorine-36 / Cosmogenic Nuclide",
+      "calculated_exposure_age_years_bp": 9400,
+      "chronological_margin_of_error": 600,
+      "stratigraphic_context_status": "Shielded internal face extraction"
+    },
+    "regional_economic_abundance": {
+      "associated_profile_matrix": "island_isolated_profile.json",
+      "local_carrying_capacity_density_per_km2": 12.0,
+      "modeled_caloric_surplus_bandwidth": "Metabolic collapse state if manual scribing assumed"
+    }
+  }
+]
