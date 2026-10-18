@@ -48,3 +48,53 @@ To ensure these sites remain open for analysis outside traditional academic gate
 1. **IPFS Mesh Replication:** All crowdsourced E57 point clouds and GIS tectonic profiles must be mirrored across open nodes to prevent database takedowns.
 2. **DeSci Pre-Registration:** Field teams must log sample tracking IDs on DeSci Publish prior to extraction to guarantee public data tracking.
 3. **Open Access Review:** Duplicated stress metrics must be routed directly through ResearchHub Earth Sciences spaces for decentralized review.
+
+---
+
+## IV. Extended Regional Anomalies: Macro-Logistics and Metallurgical Footprints
+
+### 1. East Asian Imperial Plains (Earthen Pyramid Matrix)
+* **Shaanxi Mound Complex / Xi'an Pyramids (34.3644, 108.8711):** Dozens of massive, flat-topped earth-and-clay pyramids hidden under intentional vegetation. The sheer volume of material moved matches the thermodynamic scale of the Nile Valley, yet the labor-caloric footprint is routinely minimized as mere localized feudal burial work without dynamic civil engineering studies.
+* **Mausoleum of Qin Shi Huang Base Footprint (34.3812, 109.2541):** Subterranean foundational works showing deeply buried, massive stone drainage conduits designed to divert active regional aquifers away from core elements over millennia.
+* **Longyou Caves Array (29.0614, 119.2488):** Massive, underground siltstone chambers carved with uniform, parallel chisel-stroke matrices. The excavation required moving nearly one million cubic meters of rock without leaving behind recorded regional debris piles or an established economic labor blueprint.
+
+### 2. Laurentian Shield & Upper Midwest (Anomalous Metallurgical Footprints)
+* **Isle Royale Ancient Copper Pits (48.1000, -88.5500):** Thousands of prehistoric open-pit mining trenches where thousands of tons of hyper-pure native copper were extracted long before the introduction of regional industrial tools. The missing tonnage breaks standard models of small, isolated tribal tool usage.
+* **Keweenaw Peninsula Mining Belt (47.2412, -88.4031):** Massive prehistoric extraction sites featuring micro-stone tool hammers weighing up to 30 pounds, used to fracture hard volcanic basalt hosts to harvest pure elemental copper sheets.
+* **Poverty Point Earthwork Rings (32.6372, -91.4114):** Concentric earthen ridges requiring moving millions of cubic yards of soil. It features baked loess loamy soil matrices engineered to withstand heavy seasonal Mississippi delta rain patterns without collapsing.
+
+### 3. Eurasian Steppe & Siberian Megalithic Outposts
+* **Arkaim Tectonic Circular Citadel (52.6428, 59.5719):** A highly precise, double-walled circular settlement layout integrated with sub-surface wooden and stone ventilation flues designed for early high-temperature metallurgy.
+* **Sintashta Hydrological Arrays (52.4912, 60.1834):** Overlooked stone-reinforced water diversion channels built to protect heavy copper and bronze smelting centers from catastrophic seasonal steppe river surges.
+* **Por-Bazhyn High-Altitude Matrix (50.6156, 95.3942):** A massive, isolated structural grid built on a remote island in a high-altitude Siberian lake. It uses precise, layered clay and stone retaining techniques that conflict with local nomadic timelines.
+
+### 4. Mesoamerican and Inter-Andean Structural Anomalies
+* **Teotihuacán Basal Micaceous Chambers (19.6925, -98.8436):** Large sheets of thick mica sandwiched between heavy volcanic stone foundations beneath the Pyramid of the Sun. Mica has no decorative function but serves as a highly efficient electrical and thermal insulator.
+* **Mitla Cruciform Seam Joints (16.9214, -96.3594):** Monolithic lintels and intricate stone mosaics fitted together without mortar to create interlocking joint patterns that redirect local earthquake waves.
+* **Zona Arqueológica de Calixtlahuaca (19.3331, -99.6834):** Circular stone structures built on high volcanic slopes, using precise stone keys to prevent sliding during heavy seasonal rains.
+* **El Tajín Niched Retaining Arrays (20.4478, -97.3781):** A deeply terraced layout featuring deeply recessed geometric niches designed to relieve wind shear and water pressure during massive tropical storms.
+
+### 5. West European & Atlantic Maritime Border
+* **Carnac Megalithic Alignments (47.5912, -3.0834):** Miles of massive standing stone structures arranged in precise geometric patterns across changing coastal terrain. The work required an immense long-term caloric investment from simple Neolithic farming groups.
+* **Skara Brae Subterranean Foundations (59.0486, -3.3422):** Deeply buried, double-walled stone dwellings fitted with stone-lined drains and corbeled roofs, showing advanced hydrological engineering in an isolated island setting.
+* **Newgrange Megalithic Vault (53.6947, -6.4756):** A large stone vault featuring a corbeled roof that has remained completely waterproof for over 5,000 years, using specialized structural channels to drain water away from the core interior.
+
+### 6. Sub-Saharan and Southern African Stone Matrices
+* **Great Zimbabwe Conical Complex (-20.2681, 30.9333):** Massive, curving dry-stone walls built using finely cut granite bricks that form stable structures without any mortar.
+* **Khami Terraced Outworks (-20.1485, 28.4234):** Ignored micro-polygonal terrace supports built along steep granite hillsides to stabilize fragile topsoil during high-energy seasonal downpours.
+* **Blaauboschkraal Stone Arrays (-25.6372, 30.3421):** Vast networks of terraced hillsides and circular stone structures that cover entire valleys, indicating a large-scale agricultural layout that conflicts with traditional history.
+
+### 7. Central Asian and Indian Subcontinental Elements
+* **Mohenjo-daro Great Bath Foundational Matrix (27.3292, 68.1389):** A massive brick and stone reservoir sealed with a thick layer of natural bitumen to create a perfectly waterproof container amidst shifting groundwater levels.
+* **Junagadh Rock-Cut Conduits (21.5214, 70.4578):** Deep water channels cut straight into solid rock, engineered with precise slopes to manage sudden flash flood waters coming down the Girnar hills.
+* **Edakkal Cave Carvings & Retaining Works (11.6264, 76.2345):** Overlooked stone supports built into deep mountain clefts to hold massive fallen boulders in place, preventing structural collapse in a highly unstable region.
+
+### 8. Middle Eastern and Mesopotamian Borders
+* **Baalbek Trilithon Foundations (34.0075, 36.2047):** Three massive limestone blocks weighing over 800 tons each, cut and fitted into a lower foundation wall. Moving and positioning these blocks required an extraordinary concentration of physical energy.
+* **Jericho Neolithic Tower Core (31.8714, 35.4442):** A solid stone tower built inside early settlement layers, featuring an internal staircase cut directly out of stone. It served as a massive stabilizing anchor against shifting valley soil.
+* **Shushtar Historical Hydraulic System (32.0436, 48.8569):** A complex network of stone-cut diversion tunnels, dams, and watermills designed to manage high-volume river flows.
+
+### 9. Mediterranean Islands and Coastal Links
+* **Ħaġar Qim Megalithic Alignment (35.8278, 14.4419):** Massive limestone blocks fitted together on an exposed island coast, using flush joints that reduce wind damage from severe Mediterranean storms.
+* **Torre d'en Galmés Cyclopean Layout (39.8983, 4.1186):** Talayotic stone structures built with heavy mortarless blocks, using interlocking elements designed to absorb local seismic vibrations.
+* **Su Nuraxi di Barumini Core Array (39.7042, 8.9914):** A complex system of dry-stone towers and defensive walls built around a central keep, using sloping profiles to distribute weight safely without mortar.
