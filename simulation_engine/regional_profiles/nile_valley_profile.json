@@ -1,0 +1,31 @@
+{
+  "profile_metadata": {
+    "region_name": "Lower Nile River Valley / Delta",
+    "target_elevation_meters": 15,
+    "soil_classification": "Alluvial Silt Deposit (Fluvisol)",
+    "primary_cultivars": ["Triticum dicoccum (Emmer Wheat)", "Hordeum vulgare (Barley)", "Linum usitatissimum (Flax)"]
+  },
+  "demographic_constants": {
+    "baseline_population": 120000,
+    "active_labor_pool_pct": 0.28,
+    "daily_metabolic_cost_per_capita": 2400
+  },
+  "agricultural_matrix": {
+    "alluvial_deposition_efficiency_coefficient": 1.75,
+    "unflooded_basin_yield_kcal_per_capita": 1800,
+    "inundated_basin_yield_kcal_per_capita": 5200,
+    "inundation_failure_mitigation_factor": 0.40,
+    "fallow_cycle_years": 0,
+    "annual_precipitation_mm": 25
+  },
+  "logistical_friction_coefficients": {
+    "vertical_incline_penalty_per_100m": 1.02,
+    "riverine_fluvial_transport_efficiency": 0.04,
+    "rough_terrain_caloric_expenditure_multiplier": 1.05
+  },
+  "historical_shock_thresholds": {
+    "low_inundation_drought_pct": 0.35,
+    "high_inundation_crop_destruction_pct": 0.15,
+    "extended_locust_swarm_days": 21
+  }
+}
