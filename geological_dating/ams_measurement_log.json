@@ -1,0 +1,52 @@
+[
+  {
+    "sample_telemetry": {
+      "sample_id": "MERF-AND-SAC-001",
+      "associated_site": "Sacsayhuamán Foundation Complex",
+      "mineral_fraction_isolated": "Pure Crystalline Quartz (SiO2)",
+      "sample_mass_isolated_grams": 24.5500
+    },
+    "accelerator_mass_spectrometry_metrics": {
+      "ams_facility_identifier": "PRIME-Lab-Purdue-Reference",
+      "run_timestamp_utc": "2026-10-18T07:45:00Z",
+      "target_element_chemistry": "Beryllium Oxide (BeO)",
+      "measured_10Be_to_9Be_ratio": 3.425e-12,
+      "ratio_analytical_uncertainty_1sigma": 1.15e-13
+    },
+    "production_rate_calibrations": {
+      "local_spallation_production_rate_atoms_g_yr": 4.15,
+      "muon_production_contribution_pct": 0.024,
+      "topographic_shielding_correction_factor": 0.9420
+    },
+    "chronological_output": {
+      "calculated_surface_exposure_age_years_bp": 11200,
+      "combined_uncertainty_years": 450,
+      "data_integrity_status": "VERIFIED_UNCONTAMINATED"
+    }
+  },
+  {
+    "sample_telemetry": {
+      "sample_id": "MERF-PAC-VIN-004",
+      "associated_site": "Ahu Vinapu Structural Platform",
+      "mineral_fraction_isolated": "Basaltic Quartz Phenocryst Matrix",
+      "sample_mass_isolated_grams": 18.9200
+    },
+    "accelerator_mass_spectrometry_metrics": {
+      "ams_facility_identifier": "UA-AMS-Tucson-Reference",
+      "run_timestamp_utc": "2026-10-15T14:22:00Z",
+      "target_element_chemistry": "Aluminium Oxide (Al2O3)",
+      "measured_26Al_to_27Al_ratio": 2.114e-11,
+      "ratio_analytical_uncertainty_1sigma": 8.9e-13
+    },
+    "production_rate_calibrations": {
+      "local_spallation_production_rate_atoms_g_yr": 26.88,
+      "muon_production_contribution_pct": 0.018,
+      "topographic_shielding_correction_factor": 0.9850
+    },
+    "chronological_output": {
+      "calculated_surface_exposure_age_years_bp": 9400,
+      "combined_uncertainty_years": 600,
+      "data_integrity_status": "VERIFIED_UNCONTAMINATED"
+    }
+  }
+]
