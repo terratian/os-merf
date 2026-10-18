@@ -33,34 +33,34 @@
   },
   {
     "site_metadata": {
-      "site_name": "Ahu Vinapu Structural Platform",
-      "geographical_zone": "Rapa Nui (Easter Island), Southeast Pacific",
+      "site_name": "Ollantaytambo Sector IV Terraces",
+      "geographical_zone": "Urubamba Valley, Peru",
       "coordinates": {
-        "latitude": -27.1736,
-        "longitude": -109.4025,
-        "elevation_meters": 18
+        "latitude": -13.2582,
+        "longitude": -72.2634,
+        "elevation_meters": 2792
       }
     },
     "geomechanical_features": {
-      "masonry_type": "Precision Scribed Mortarless Polygonal",
-      "primary_lithology": "Basalt",
+      "masonry_type": "Asymmetric Microlithic Layered Retaining",
+      "primary_lithology": "Fieldstone Granite / Alluvial Silt Mortarless",
       "geotorsional_adaptations": [
-        "Planar rear beveling for micro-gap fitment",
-        "Asymmetric geometric load distribution",
-        "Basal keyway nesting"
+        "Inward inclined anti-gravity batter walls",
+        "Deep angular ballast stone drainage packing",
+        "Modular stress-relief joints every 4.5 meters"
       ],
-      "peak_block_mass_tons": 7.5
+      "peak_block_mass_tons": 0.45
     },
     "empirical_chronology": {
-      "surface_exposure_dating_method": "Chlorine-36 / Cosmogenic Nuclide",
-      "calculated_exposure_age_years_bp": 9400,
-      "chronological_margin_of_error": 600,
-      "stratigraphic_context_status": "Shielded internal face extraction"
+      "surface_exposure_dating_method": "10Be Sealed Interfacial Quartz Core",
+      "calculated_exposure_age_years_bp": 9800,
+      "chronological_margin_of_error": 320,
+      "stratigraphic_context_status": "Sealed beneath sub-surface structural drainage layers"
     },
     "regional_economic_abundance": {
-      "associated_profile_matrix": "island_isolated_profile.json",
-      "local_carrying_capacity_density_per_km2": 12.0,
-      "modeled_caloric_surplus_bandwidth": "Metabolic collapse state if manual scribing assumed"
+      "associated_profile_matrix": "andes_profile.json",
+      "local_carrying_capacity_density_per_km2": 92.0,
+      "modeled_caloric_surplus_bandwidth": "Highly efficient metabolic stabilization profile"
     }
   }
 ]
