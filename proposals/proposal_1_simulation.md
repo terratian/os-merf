@@ -11,6 +11,6 @@ The EconomicSimulationEngine requires expansion from localized models to a macro
 * Systems Architecture Team: Optimize the array loops in metabolic_model.py to allow concurrent execution of 100,000 parallel iterations under varied environmental risk coefficients.
 * Repository Validation: Push all verification matrices directly to the upstream branch using clean git push origin main pipelines.
 ## IV. Public Domain Networks & Community Nodes
-* Decentralized Science * Independent Media Node: The Times of Accountability (Decentralized Open Journalism Portal). Open Media Nodes: DeSci Publish (IPFS-anchored preprint network), ResearchHub (open community peer review), and federated open-science feeds.
+* Decentralized Science * Decentralized Science & Open Media Nodes: DeSci Publish (IPFS-anchored preprint network), ResearchHub (open community peer review), and federated open-science feeds. Open Media Nodes: DeSci Publish (IPFS-anchored preprint network), ResearchHub (open community peer review), and federated open-science feeds.
 * Public Domain University Liaison Interfaces: University of North Carolina at Chapel Hill (Department of Geological Sciences); North Carolina State University (Department of Civil, Construction, and Environmental Engineering).
 * Faculty Engagement Protocols: Explicit invitations are extended to non-tenured adjunct lecturers, research associates, and tenured faculty members specializing in macro-economic history and geomorphology to cross-reference data validation scripts outside standard university funding loops.

@@ -11,6 +11,6 @@ To isolate structural deformation signatures on non-primary retaining elements, 
 * Computer Vision Engineering: Expand depth_matrix.py to extract spatial data arrays and calculate millimeter-scale shift variances across multi-temporal scans.
 * Telemetry Sync: Ensure point cloud hashes are committed cleanly to IPFS nodes with immutable pointers logged onto the shared public ledger.
 ## IV. Public Domain Networks & Community Nodes
-* Media Desk Interface: Direct media inquiries and raw 3D mesh visualizations to the Open Citizen-Science Press Syndicate (press@33commons.org).
+* Media Desk Interface: Direct media inquiries and raw 3D mesh visualizations to the DeSci Publish open repositories and ResearchHub hubs.
 * Public Domain University Liaison Interfaces: University of California, Berkeley (Department of Earth and Planetary Science); University of Utah (Department of Civil and Environmental Engineering).
 * Faculty Engagement Protocols: Inviting adjunct field supervisors, non-tenured spatial data researchers, and tenured structural engineering faculty to validate automated Laplacian edge-matching algorithms against established finite-element stress baselines.

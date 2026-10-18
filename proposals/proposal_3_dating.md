@@ -11,6 +11,6 @@ This document outlines the standard rules for field deployment of non-destructiv
 * Field Team Protocol: Execute extraction sequences strictly under a continuous positive-pressure Nitrogen (N2) environment using the validation checklist parameters.
 * Open Chemistry Access: Commit raw isotopic ratio arrays (10Be/9Be) directly to public Git branches for global review.
 ## IV. Public Domain Networks & Community Nodes
-* Cross-Disciplinary Journalism Node: The Decentralized Open Science Network (science@33commons.org).
+* Cross-Disciplinary Journalism Node: ResearchHub peer verification channels.
 * Public Domain University Liaison Interfaces: University of Arizona (Department of Geosciences); Purdue University (Department of Earth, Atmospheric, and Planetary Sciences).
 * Faculty Engagement Protocols: Extending calls to open university discipline faculty, including non-tenured postdoctoral laboratory technicians, adjunct geochemistry instructors, and tenured isotope geochronologists, to run duplicate blind audits on internal joint quartz samples.
