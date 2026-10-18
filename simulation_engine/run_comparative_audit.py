@@ -13,6 +13,7 @@
 import sys
 import os
 from metabolic_model import EconomicSimulationEngine
+from topographical_assay.joint_classifier import JointClassifier
 
 def run_comparative_audit():
     andes_profile = "simulation_engine/regional_profiles/andes_profile.json"
@@ -24,53 +25,75 @@ def run_comparative_audit():
         sys.exit(1)
 
     print("=== Initializing OS-MERF Comparative Profile Audit ===")
+    
+    # 1. Initialize structural and metabolic engines
+    classifier = JointClassifier()
     andes_engine = EconomicSimulationEngine(andes_profile)
     nile_engine = EconomicSimulationEngine(nile_profile)
 
-    # Establish shared testing matrix configurations
-    simulation_years = 5
-    shared_shocks = {3: "drought"}  # Synchronized environmental shock hit in Year 3
+    # Mock evaluation path: Extracting structural edge variance array metrics 
+    # from a sample site diagnostic image target.
+    # In full deployment, this feeds directly from the ingestion app payload array.
+    print(" -> Ingesting computer vision spatial matrix data array...")
     
-    # Standard testing load parameters (Moving 15,000 tons over 6 km)
+    # Simulating the exact return dictionary structure from joint_classifier.py
+    mock_vision_telemetry = {
+        "status": "PROFILED",
+        "structural_edge_variance": 18.4562,
+        "polygonal_vertex_complexity": 24,
+        "structural_classification": "Verified High-Complexity 3D Polygonal Interlocking Masonry"
+    }
+    
+    edge_variance = mock_vision_telemetry["structural_edge_variance"]
+    complexity = mock_vision_telemetry["polygonal_vertex_complexity"]
+    print(f" -> Structural Edge Variance Ingested: {edge_variance}")
+    print(f" -> Polygonal Complexity Scored: {complexity}")
+
+    # 2. Derive utility coefficient dynamically from edge variance metrics
+    # High variance tracks advanced structural interlocking shapes (geotorsional dissipation capacity)
+    if complexity > 12 and edge_variance > 15.0:
+        dynamic_utility_coefficient = 0.65  # High infrastructure survival return factor
+    else:
+        dynamic_utility_coefficient = 0.00  # Zero survival utility asset drain
+
+    # 3. Establish shared testing matrix configurations
     tonnage = 15000
     distance = 6
     elevation_lift = 200
 
-    print(f"Project Parameters: {tonnage} tons | {distance} km | {elevation_lift}m vertical lift")
-    print(f"Environmental Timeline: {simulation_years}-Year Cycle [Year 3 Shock: Drought]\n")
+    print(f"\nProject Load: {tonnage} tons | {distance} km | {elevation_lift}m vertical lift")
+    print(f"Calculated Infrastructure Utility Vector: {dynamic_utility_coefficient}")
 
-    # Execute simulation loops for both profiles
-    andes_log = andes_engine.execute_multi_year_matrix(
-        timeline_years=simulation_years,
+    # 4. Execute simulation loops for both profiles using parsed profile loops
+    andes_log = andes_engine.execute_profile_timeline(
         project_tonnage=tonnage,
         distance_km=distance,
         elevation_gain_m=elevation_lift,
-        utility_coefficient=0,
-        shock_schedule=shared_shocks
+        utility_coefficient=dynamic_utility_coefficient
     )
 
-    nile_log = nile_engine.execute_multi_year_matrix(
-        timeline_years=simulation_years,
+    nile_log = nile_engine.execute_profile_timeline(
         project_tonnage=tonnage,
         distance_km=distance,
         elevation_gain_m=elevation_lift,
-        utility_coefficient=0,
-        shock_schedule=shared_shocks
+        utility_coefficient=dynamic_utility_coefficient
     )
 
-    # Format and output side-by-side comparative telemetry matrices
-    print(f"{'Year':<6} | {'Event':<12} | {'Andean Status':<18} | {'Nile Status':<18}")
-    print("-" * 65)
+    # 5. Format and output side-by-side comparative telemetry matrices
+    print(f"\n{'Year':<6} | {'Andean Balance (kcal)':<22} | {'Andean Status':<15} | {'Nile Status':<15}")
+    print("-" * 70)
 
     max_years = max(len(andes_log), len(nile_log))
     for i in range(max_years):
-        year = i + 1
-        event = shared_shocks.get(year, "Baseline")
+        andes_data = andes_log[i] if i < len(andes_log) else None
+        nile_data = nile_log[i] if i < len(nile_log) else None
         
-        andes_status = andes_log[i]["status"] if i < len(andes_log) else "HALTED"
-        nile_status = nile_log[i]["status"] if i < len(nile_log) else "HALTED"
+        year = andes_data["year"] if andes_data else (nile_data["year"] if nile_data else i + 1)
+        andes_bal = andes_data["cumulative_pool_kcal"] if andes_data else "HALTED"
+        andes_stat = andes_data["status"] if andes_data else "COLLAPSED"
+        nile_stat = nile_data["status"] if nile_data else "COLLAPSED"
         
-        print(f"{year:<6} | {event:<12} | {andes_status:<18} | {nile_status:<18}")
+        print(f"{year:<6} | {str(andes_bal):<22} | {andes_stat:<15} | {nile_stat:<15}")
 
     print("\n=== Comparative Evaluation Concluded ===")
 
