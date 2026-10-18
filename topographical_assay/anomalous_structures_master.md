@@ -98,3 +98,19 @@ To ensure these sites remain open for analysis outside traditional academic gate
 * **Ħaġar Qim Megalithic Alignment (35.8278, 14.4419):** Massive limestone blocks fitted together on an exposed island coast, using flush joints that reduce wind damage from severe Mediterranean storms.
 * **Torre d'en Galmés Cyclopean Layout (39.8983, 4.1186):** Talayotic stone structures built with heavy mortarless blocks, using interlocking elements designed to absorb local seismic vibrations.
 * **Su Nuraxi di Barumini Core Array (39.7042, 8.9914):** A complex system of dry-stone towers and defensive walls built around a central keep, using sloping profiles to distribute weight safely without mortar.
+
+### 4. Mesoamerican and Inter-Andean Structural Anomalies
+* **Teotihuacán Basal Micaceous Chambers (19.6925, -98.8436):** Large sheets of thick mica sandwiched between heavy volcanic stone foundations beneath the Pyramid of the Sun. Mica has no decorative function but serves as a highly efficient electrical and thermal insulator.
+* **Mitla Cruciform Seam Joints (16.9214, -96.3594):** Monolithic lintels and intricate stone mosaics fitted together without mortar to create interlocking joint patterns that redirect local earthquake waves.
+* **Zona Arqueológica de Calixtlahuaca (19.3331, -99.6834):** Circular stone structures built on high volcanic slopes, using precise stone keys to prevent sliding during heavy seasonal rains.
+* **El Tajín Niched Retaining Arrays (20.4478, -97.3781):** A deeply terraced layout featuring deeply recessed geometric niches designed to relieve wind shear and water pressure during massive tropical storms.
+
+### 5. West European & Atlantic Maritime Border
+* **Carnac Megalithic Alignments (47.5912, -3.0834):** Miles of massive standing stone structures arranged in precise geometric patterns across changing coastal terrain. The work required an immense long-term caloric investment from simple Neolithic farming groups.
+* **Skara Brae Subterranean Foundations (59.0486, -3.3422):** Deeply buried, double-walled stone dwellings fitted with stone-lined drains and corbeled roofs, showing advanced hydrological engineering in an isolated island setting.
+* **Newgrange Megalithic Vault (53.6947, -6.4756):** A large stone vault featuring a corbeled roof that has remained completely waterproof for over 5,000 years, using specialized structural channels to drain water away from the core interior.
+
+### 6. Sub-Saharan and Southern African Stone Matrices
+* **Great Zimbabwe Conical Complex (-20.2681, 30.9333):** Massive, curving dry-stone walls built using finely cut granite bricks that form stable structures without any mortar.
+* **Khami Terraced Outworks (-20.1485, 28.4234):** Ignored micro-polygonal terrace supports built along steep granite hillsides to stabilize fragile topsoil during high-energy seasonal downpours.
+* **Blaauboschkraal Stone Arrays (-25.6372, 30.3421):** Vast networks of terraced hillsides and circular stone structures that cover entire valleys, indicating a large-scale agricultural layout that conflicts with traditional history.
