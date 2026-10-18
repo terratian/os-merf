@@ -1,59 +1,65 @@
-# OS-MERF System Architecture: Open-Source Citizen-Science Data Ingestion App
+# OS-MERF System Architecture: 3D Point Cloud & Tectonic GIS Ingestion Engine
 # Protected under GNU GPL v3 | Copyright (C) 2026 Joshua Sultan (terratian)
 
-## I. System Overview & Edge Client Ingestion
-To bypass institutional gatekeeping, the ingestion app operates as a decentralized client node that handles local spatial processing on consumer mobile hardware (e.g., Crostini/Linux local nodes, Android/iOS edge devices) prior to database syncing.
+## I. Comprehensive Spatial & Tectonic Data Pipeline
+To map long-term geomechanical stress across heritage sites, the system integrates high-density 3D spatial data (.e57 point clouds, .las files) with deep-time GIS records tracking active fault movements, floodplain migrations, and local ground accelerations across timelines ranging from millions of years down to immediate seasonal shifts.
 
-1. Edge Client Capture: Multi-Angle Photogrammetry / Mobile LiDAR (.e57 format)
-2. Integrity Check: Metadata verification loop (EXIF/GPS tamper audit checks)
-3. Processing Engine: Automatic filtration via OpenCV Laplacian variance metrics
-4. Storage Layer: Hashed asset indexing via decentralized IPFS distribution nodes
-5. State Registry: Permanent, immutable coordination logging via a public global ledger
+The processing workflow runs sequentially:
+1. Telemetry Ingestion: Imports raw high-density 3D E57 point clouds and GIS geospatial shapefiles.
+2. Dimensional Segmentation: Diverts payloads into independent 3D Point Cloud arrays and deep-time GIS historical loops.
+3. Feature-Based Analysis: Runs automated machine learning passes to evaluate localized geotorsional stress concentrations on non-primary infrastructure (such as stabilizing terraces, retaining structures, and conduits).
 
 ---
 
-## II. Data Payload & Telemetry Structure
-Every crowdsourced field submission must bundle spatial, geographical, and hardware sensor telemetry into a single unified JSON metadata schema prior to blockchain/IPFS submission:
+## II. Extended Spatial & Tectonic Schema Configuration
+Crowdsourced field payloads must map structural geometry simultaneously against long-term local geomechanical transformations using this comprehensive JSON model structure:
 
 ```json
 {
-  "submission_metadata": {
-    "node_public_key": "ed25519_pubkey_bytes_here",
-    "timestamp_utc": "2026-10-18T06:27:00Z",
-    "client_software_version": "v1.0.4-beta"
+  "site_spatial_telemetry": {
+    "point_cloud_manifest": {
+      "file_format": ".e57",
+      "total_vertices_count": 450000000,
+      "spatial_precision_mm": 0.5,
+      "intensity_channel_mapped": true
+    },
+    "structural_feature_analysis": {
+      "primary_heritage_structures_count": 3,
+      "non_primary_stabilizing_elements": [
+        "Polygonal hillside retaining terraces",
+        "Sub-surface conduit channels",
+        "Basal energy dissipation arrays"
+      ]
+    }
   },
-  "geospatial_telemetry": {
-    "coordinate_latitude": -13.5079,
-    "coordinate_longitude": -71.9822,
-    "elevation_ellipsoidal_meters": 3701.4,
-    "gps_hardware_precision_index_hdop": 0.85
-  },
-  "hardware_sensor_array": {
-    "capture_device_model": "iPhone 16 Pro / Custom iPad LiDAR Array",
-    "sensor_type": "Solid-State LiDAR Time-of-Flight / CMOS raw photogrammetry",
-    "exif_tamper_signature_valid": true
-  },
-  "payload_manifest": {
-    "spatial_point_cloud_hash_sha256": "8f3a9e...e7b2",
-    "raw_mesh_format": ".e57",
-    "total_vertices_count": 8459200
+  "deep_time_gis_integration": {
+    "fault_line_proximity": {
+      "active_fault_system": "Tambomachay Fault System",
+      "distance_to_axis_meters": 450.0,
+      "slip_rate_mm_per_year": 1.2,
+      "macro_geological_timeline_years": 2500000
+    },
+    "floodplain_hydrological_variance": {
+      "alluvial_basin_migration_history": "Periodic high-energy debris flow cycles",
+      "alluvial_shift_rate_meters_per_millennium": 14.5
+    },
+    "geotorsional_stress_matrix": {
+      "measured_lateral_shear_vector": [0.045, -0.012, 0.089],
+      "historical_peak_ground_acceleration_g": 0.42
+    }
   }
 }
 ```
 
 ---
 
-## III. Automated Pipeline & Counter-Poisoning Protocols
-To insulate the database against malicious institutional poisoning, targeted data scrubbing, or fake generation arrays, the backend orchestration engine subjects every payload to three sequential verification states:
+## III. Agentic Feature & Stress Analysis Protocols
+To verify whether non-primary retaining systems successfully mitigated deep-time earth movement, the automated validation backend runs the following execution checks:
 
-### 1. Cryptographic and Metadata Sanitization
-* EXIF Tamper Check: Compares internal frame sensor data arrays with absolute system clock arrays. Any mismatch between device file compilation and upload timestamps flags the package.
-* Hardware Profile Matching: Correlates the depth map matrix arrays against known solid-state hardware noise profiles. Fake or procedurally generated synthetic point clouds will lack real-world optical noise vectors.
+### 1. 3D Cloud Structural Segmentation
+* Feature Extraction: The machine learning pipeline isolates non-primary retaining elements (such as secondary terraces or outbuildings) away from primary monuments.
+* Deformation Analysis: The engine evaluates spatial variations across multi-temporal datasets to identify precisely where the non-primary stones have shifted to absorb active geomechanical forces.
 
-### 2. Edge-Dissonance Processing (joint_classifier.py Linkage)
-* The automated system pipes the raw .e57 spatial point cloud or imagery array directly through our local JointClassifier script.
-* Filter Rule: If polygonal_vertex_complexity records standard rectangular values (<= 12), yet the user manually categorizes the asset as a "megalithic 3D interlocking matrix," the entry is auto-triangulated down to lower-priority human validation queues.
-
-### 3. Decentralized Database Ledger Sync
-* Validated entries bypass traditional server databases. The structural coordinates and spatial meshes are hashed and committed to IPFS (InterPlanetary File System).
-* The immutable IPFS pointer addresses are logged onto a publicly auditable ledger, ensuring the physical spatial records can never be erased, modified, or hidden by central authorities.
+### 2. Multi-Era Tectonic Modeling
+* Timeline Projection: The simulation uses deep-time GIS data to dynamically reconstruct local landscape variations across a macro timeline spanning millions of years.
+* Stress Auditing: The script calculates historical shear forces hitting the site during seismic cycles, verifying if the complex 3D stone puzzle geometry matches the vector parameters required to neutralize failure points.
