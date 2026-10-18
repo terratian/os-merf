@@ -13,11 +13,13 @@
 import json
 import os
 import sys
+from environmental_shocks import EnvironmentalShockEngine
 
 class EconomicSimulationEngine:
     """
     Evaluates the thermodynamic and metabolic feasibility of ancient lithic projects
-    by ingesting real-world profile data and calculating dynamic labor costs.
+    across multi-year timelines by incorporating dynamic JSON profile constants
+    and stochastic environmental shock data models.
     """
     def __init__(self, profile_path):
         self.profile = self.load_profile(profile_path)
@@ -30,10 +32,13 @@ class EconomicSimulationEngine:
         
         # Ingest agricultural matrix constants
         agri = self.profile["agricultural_matrix"]
-        self.caloric_yield = agri["terrace_yield_kcal_per_capita"]
+        self.base_caloric_yield = agri["terrace_yield_kcal_per_capita"]
         
         # Ingest logistical friction matrices
         self.friction = self.profile["logistical_friction_coefficients"]
+        
+        # Initialize the localized climate engine
+        self.shock_engine = EnvironmentalShockEngine(baseline_yield=self.base_caloric_yield)
 
     def load_profile(self, path):
         if not os.path.exists(path):
@@ -41,62 +46,91 @@ class EconomicSimulationEngine:
         with open(path, 'r') as f:
             return json.load(f)
 
-    def calculate_feasibility(self, project_tonnage, distance_km, elevation_gain_m, utility_coefficient):
-        # Calculate base regional energy availability
-        total_available_calories = self.population * self.caloric_yield * 365
-        societal_maintenance_calories = self.population * self.base_metabolic_cost * 365
-        caloric_surplus = total_available_calories - societal_maintenance_calories
-
-        if caloric_surplus <= 0:
-            return {"status": "CRITICAL_COLLAPSE", "reason": "Subsistence deficit under local environmental limits"}
-
-        # Calculate dynamic transport friction based on physical landscape variables
+    def execute_multi_year_matrix(self, timeline_years, project_tonnage, distance_km, elevation_gain_m, utility_coefficient, shock_schedule=None):
+        # Generate the environmental agricultural timeline matrix
+        climate_timeline = self.shock_engine.run_multi_year_simulation(timeline_years, shock_schedule)
+        
+        # Calculate localized transport friction variables
         terrain_multiplier = self.friction["rough_terrain_caloric_expenditure_multiplier"]
         incline_penalty_factor = (elevation_gain_m / 100) * self.friction["vertical_incline_penalty_per_100m"]
         
-        # Caloric cost equation updated with profile friction constraints
         base_kinetic_kcal_per_ton_km = 3500
-        adjusted_kinetic_cost = (project_tonnage * distance_km * base_kinetic_kcal_per_ton_km * terrain_multiplier)
+        annual_kinetic_cost = (project_tonnage * distance_km * base_kinetic_kcal_per_ton_km * terrain_multiplier)
         if incline_penalty_factor > 0:
-            adjusted_kinetic_cost *= incline_penalty_factor
+            annual_kinetic_cost *= incline_penalty_factor
 
-        remaining_surplus = caloric_surplus - adjusted_kinetic_cost
+        simulation_log = []
+        cumulative_surplus_pool = 0
 
-        if remaining_surplus < 0 and utility_coefficient == 0:
-            return {
-                "status": "SYSTEMIC_COLLAPSE",
-                "remaining_surplus_kcal": remaining_surplus,
-                "reason": "Caloric bankruptcy driven by non-utility construction under strict regional friction coefficients"
-            }
-        elif remaining_surplus < 0 and utility_coefficient > 0:
-            retained_value = adjusted_kinetic_cost * utility_coefficient
-            if (remaining_surplus + retained_value) > 0:
-                return {
-                    "status": "SUSTAINED_VIA_UTILITY",
-                    "remaining_surplus_kcal": remaining_surplus,
-                    "reason": "Initial labor deficit structurally offset by macro engineering infrastructure utility"
-                }
+        for year_data in climate_timeline:
+            year = year_data["year"]
+            current_yield = year_data["yield_per_capita"]
+            active_shock = year_data["event"]
 
-        return {
-            "status": "STABLE_EXECUTION",
-            "remaining_surplus_kcal": remaining_surplus,
-            "reason": "Territory possesses sufficient metabolic bandwidth to absorb construction profile limits"
-        }
+            # Calculate metabolic pool values for the current year cycle
+            total_available_calories = self.population * current_yield * 365
+            societal_maintenance_calories = self.population * self.base_metabolic_cost * 365
+            yearly_surplus = total_available_calories - societal_maintenance_calories
+            
+            # Deduct infrastructure construction costs
+            net_yearly_balance = yearly_surplus - annual_kinetic_cost
+            cumulative_surplus_pool += net_yearly_balance
+
+            # Evaluate system stability flags
+            status = "STABLE"
+            reason = "Metabolic bandwidth sustained"
+
+            if cumulative_surplus_pool < 0:
+                if utility_coefficient == 0:
+                    status = "SYSTEMIC_COLLAPSE"
+                    reason = f"Caloric bankruptcy triggered in Year {year} via non-utility architecture under {active_shock} stress"
+                else:
+                    retained_value = annual_kinetic_cost * utility_coefficient
+                    if (cumulative_surplus_pool + retained_value) > 0:
+                        status = "SUSTAINED_VIA_UTILITY"
+                        reason = "Caloric stress structurally mitigated by infrastructure system utility returns"
+                    else:
+                        status = "TOTAL_SYSTEMIC_COLLAPSE"
+                        reason = f"Catastrophic failure: System utility threshold overwhelmed by multi-year {active_shock} degradation"
+
+            simulation_log.append({
+                "year": year,
+                "event": active_shock,
+                "net_yearly_balance_kcal": round(net_yearly_balance, 2),
+                "cumulative_pool_kcal": round(cumulative_surplus_pool, 2),
+                "status": status,
+                "reason": reason
+            })
+
+            # Terminate simulation if total systemic failure occurs
+            if status in ["SYSTEMIC_COLLAPSE", "TOTAL_SYSTEMIC_COLLAPSE"]:
+                break
+
+        return simulation_log
 
 if __name__ == "__main__":
-    # Internal validation pathway executing against the local profile blueprint
     profile_target = "simulation_engine/regional_profiles/andes_profile.json"
     
     try:
         engine = EconomicSimulationEngine(profile_target)
-        # Test Parameters: Moving 12,000 tons, 8 km distance, with 300m total vertical lift
-        results = engine.calculate_feasibility(
-            project_tonnage=12000, 
-            distance_km=8, 
-            elevation_gain_m=300, 
-            utility_coefficient=0
+        
+        # Test Parameters: 5-Year timeline with an El Niño scale drought hitting in Year 3
+        custom_shocks = {3: "drought"}
+        
+        results = engine.execute_multi_year_matrix(
+            timeline_years=5,
+            project_tonnage=15000,
+            distance_km=6,
+            elevation_gain_m=250,
+            utility_coefficient=0,
+            shock_schedule=custom_shocks
         )
-        print(f"Simulation Status: {results['status']}")
-        print(f"Details: {results['reason']}")
+        
+        print(f"=== Running Protected OS-MERF Multi-Year Stress Array ===")
+        for log in results:
+            print(f"Year {log['year']} | Event: {log['event']} | Status: {log['status']}")
+            print(f" -> Cumulative Pool: {log['cumulative_pool_kcal']} kcal")
+            print(f" -> Diagnosis: {log['reason']}\n")
+            
     except Exception as e:
         print(f"Engine Fault: {str(e)}")
